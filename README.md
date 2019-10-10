@@ -1032,6 +1032,29 @@ It returns this response in ruby hash. A sample response:
 }
 ```
 
+### `.update_subaccount(id)`
+
+This function is used to update a subaccount by taking in the  id as its argument.
+
+#### Sample update_subaccount call:
+
+```ruby
+response = subaccount.update_subaccount("1234")
+```
+
+#### which returns:
+
+It returns this response in ruby hash. A sample response:
+
+```ruby
+{
+    "error"=>false, "data"=>{"status"=>"success", "message"=>"SUBACCOUNT-EDITED", "data"=>{"id"=>1234, "account_number"=>"1234567890", "account_bank"=>"0
+44", "business_name"=>"Test Stores", "fullname"=>"Bale Gary", "date_created"=>"2019-07-18T10:53:32.000Z", "meta"=>[{"metaname"=>"MarketplaceID", "meta
+value"=>"ggs-920900"}], "account_id"=>65394, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>3000, "subaccount_id"=>"RS_DB708DA61222E6ED845F630
+54A52FFAE", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}}
+}
+```
+
 #### Full SubAccount Flow:
 
 ```ruby
