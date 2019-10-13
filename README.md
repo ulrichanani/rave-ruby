@@ -986,9 +986,7 @@ It returns this response in ruby hash. A sample response:
 
 ```ruby
 
-{
-    "error"=>false, "data"=>{"status"=>"success", "message"=>"SUBACCOUNTS", "data"=>{"page_info"=>{"total"=>6, "current_page"=>1, "total_pages"=>1}, "subaccounts"=>[{"id"=>350, "account_number"=>"0690000033", "account_bank"=>"044", "business_name"=>"Test Stores", "fullname"=>"Bale Gary", "date_created"=>"2018-12-28T16:20:40.000Z", "meta"=>[{"metaname"=>"MarketplaceID", "metavalue"=>"ggs-920900"}], "account_id"=>14101, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>3000, "subaccount_id"=>"RS_CC09B109AA8F0CA5D9CE067492C548DA", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}, {"id"=>344, "account_number"=>"0690000041", "account_bank"=>"044", "business_name"=>"Sub 2", "fullname"=>"Alexis Rogers", "date_created"=>"2018-12-21T11:39:09.000Z", "meta"=>nil, "account_id"=>13633, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>100, "subaccount_id"=>"RS_A75DB3502DDE69D07834A770888C26EE", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}, {"id"=>343, "account_number"=>"0690000031", "account_bank"=>"044", "business_name"=>"Sub 1", "fullname"=>"Forrest Green", "date_created"=>"2018-12-21T11:37:00.000Z", "meta"=>nil, "account_id"=>13632, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>40, "subaccount_id"=>"RS_D073562598485BCEEB0A5287F99623FC", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}, {"id"=>325, "account_number"=>"0690000032", "account_bank"=>"044", "business_name"=>"Jake Stores", "fullname"=>"Pastor Bright", "date_created"=>"2018-12-13T20:34:51.000Z", "meta"=>[{"metaname"=>"MarketplaceID", "metavalue"=>"ggs-920900"}], "account_id"=>13212, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>3000, "subaccount_id"=>"RS_4091F27A32D176070DA3CAF018E3450E", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}, {"id"=>126, "account_number"=>"0690000037", "account_bank"=>"044", "business_name"=>"Sub Account 2", "fullname"=>"Ibra Mili", "date_created"=>"2018-10-12T15:08:48.000Z", "meta"=>nil, "account_id"=>9522, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>500, "subaccount_id"=>"RS_AE7B0858E69C6BFEB5C143CAA0A13FC3", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}, {"id"=>125, "account_number"=>"0690000035", "account_bank"=>"044", "business_name"=>"sub account 1", "fullname"=>"Peter Crouch", "date_created"=>"2018-10-12T14:39:41.000Z", "meta"=>nil, "account_id"=>9520, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>100, "subaccount_id"=>"RS_2B1B3B6985172B9046A58DCA9E9026E0", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}]}}
-}
+{"status"=>"success", "message"=>"SUBACCOUNT-EDITED", "data"=>{"id"=>1234, "account_number"=>"1234567890", "account_bank"=>"044", "business_name"=>"Test Stores", "fullname"=>"Bale Gary", "date_created"=>"2019-07-18T10:53:32.000Z", "meta"=>[{"metaname"=>"MarketplaceID", "metavalue"=>"ggs-920900"}], "account_id"=>65394, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>3000, "subaccount_id"=>"RS_DB708DA61222E6ED845F63054A52FFAE", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}}
 
 ```
 
@@ -1029,6 +1027,29 @@ It returns this response in ruby hash. A sample response:
 ```ruby
 {
     "error"=>false, "data"=>{"status"=>"success", "message"=>"SUBACCOUNT-DELETED", "data"=>"Deleted"}
+}
+```
+
+### `.update_subaccount(id)`
+
+This function is used to update a subaccount by taking in the  id as its argument.
+
+#### Sample update_subaccount call:
+
+```ruby
+response = subaccount.update_subaccount("1234")
+```
+
+#### which returns:
+
+It returns this response in ruby hash. A sample response:
+
+```ruby
+{
+    "error"=>false, "data"=>{"status"=>"success", "message"=>"SUBACCOUNT-EDITED", "data"=>{"id"=>1234, "account_number"=>"1234567890", "account_bank"=>"0
+44", "business_name"=>"Test Stores", "fullname"=>"Bale Gary", "date_created"=>"2019-07-18T10:53:32.000Z", "meta"=>[{"metaname"=>"MarketplaceID", "meta
+value"=>"ggs-920900"}], "account_id"=>65394, "split_ratio"=>1, "split_type"=>"flat", "split_value"=>3000, "subaccount_id"=>"RS_DB708DA61222E6ED845F630
+54A52FFAE", "bank_name"=>"ACCESS BANK NIGERIA", "country"=>"NG"}}
 }
 ```
 
